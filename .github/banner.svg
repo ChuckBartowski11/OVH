@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-label="OVHcloud SDK PHP">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#000e9c"/>
+      <stop offset="0.55" stop-color="#0050d7"/>
+      <stop offset="1" stop-color="#4d94ff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7fb2ff"/>
+      <stop offset="1" stop-color="#d6e6ff"/>
+    </linearGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#ffffff" opacity="0.09"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="280" rx="16" fill="url(#bg)"/>
+  <rect width="1200" height="280" rx="16" fill="url(#dots)"/>
+
+  <g opacity="0.16" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="936" y="60" width="150" height="30" rx="6"/>
+    <rect x="936" y="100" width="150" height="30" rx="6"/>
+    <rect x="936" y="140" width="150" height="30" rx="6"/>
+    <circle cx="954" cy="75" r="4" fill="#ffffff" stroke="none"/>
+    <circle cx="954" cy="115" r="4" fill="#ffffff" stroke="none"/>
+    <circle cx="954" cy="155" r="4" fill="#ffffff" stroke="none"/>
+    <path d="M1010 198a28 28 0 0 1 6 55h-78a34 34 0 0 1-5-67 42 42 0 0 1 77 12z"/>
+  </g>
+
+  <g opacity="0.22" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="20" fill="#ffffff">
+    <text x="76" y="228">$ovh-&gt;domains()-&gt;addRecord('example.com', 'A', '203.0.113.10');</text>
+  </g>
+
+  <g font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="76" y="118" font-size="60" font-weight="800" fill="#ffffff" letter-spacing="-1">OVHcloud SDK PHP</text>
+    <text x="76" y="166" font-size="30" font-weight="500" fill="#d6e6ff">Every product, native request signing</text>
+  </g>
+
+  <rect x="78" y="188" width="220" height="6" rx="3" fill="url(#accent)"/>
+
+  <g font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#ffffff" opacity="0.85" text-anchor="middle">
+    <g>
+      <rect x="700" y="52" width="98" height="30" rx="15" fill="#ffffff" opacity="0.12"/>
+      <text x="749" y="72">Domains</text>
+    </g>
+    <g>
+      <rect x="810" y="52" width="82" height="30" rx="15" fill="#ffffff" opacity="0.12"/>
+      <text x="851" y="72">Cloud</text>
+    </g>
+    <g>
+      <rect x="700" y="94" width="112" height="30" rx="15" fill="#ffffff" opacity="0.12"/>
+      <text x="756" y="114">Dedicated</text>
+    </g>
+    <g>
+      <rect x="824" y="94" width="92" height="30" rx="15" fill="#ffffff" opacity="0.12"/>
+      <text x="870" y="114">Kube</text>
+    </g>
+  </g>
+</svg>
