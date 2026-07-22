@@ -59,6 +59,7 @@ Framework-agnostic core — usable from any PHP project, script, or worker — w
 - [Error Handling](#error-handling)
 - [Testing](#testing)
 - [Security Notes](#security-notes)
+- [WHMCS module](#whmcs-module)
 - [License](#license)
 
 ---
@@ -338,6 +339,24 @@ vendor/bin/phpunit
 - Scope consumer keys tightly with `accessRules` — grant `GET /domain/*`, not `ALL /*`, when a service only reads domains.
 - Keep credentials in `.env.local` or your secret vault — never commit them.
 - Destructive calls (`deleteInstance`, `deleteRecord`, `deleteCluster`, dedicated `reinstall`) are irreversible — gate them behind confirmation flows.
+
+## WHMCS module
+
+A ready-to-use **WHMCS registrar module** ships in [`whmcs/modules/registrars/ovhsdk/`](whmcs/modules/registrars/ovhsdk). It plugs OVHcloud domains into WHMCS's DNS and nameserver management through this SDK.
+
+**Install**
+
+1. `composer require chuckbartowski/ovh-sdk` in your WHMCS root.
+2. Copy the `ovhsdk` folder into `<whmcs>/modules/registrars/`.
+3. Activate *OVHcloud (SDK)* in *System Settings » Domain Registrars* and enter your **application key / secret / consumer key** and endpoint.
+
+| WHMCS action | SDK call |
+|---|---|
+| Get / Save nameservers | `domains()->records(... NS)` / `updateNameservers()` |
+| Get DNS records | `domains()->records()` + `record()` (MX priority split out) |
+| Save DNS records | replace all records, then `refreshZone()` |
+
+Domain **registration and transfers** go through OVHcloud's order cart (`orders()`), which is a multi-step purchase flow — the registrar hooks above cover the day-to-day DNS management that WHMCS drives automatically.
 
 ## License
 
